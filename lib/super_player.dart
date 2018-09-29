@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 
-final MethodChannel _channel = const MethodChannel('flutter.io/videoPlayer')
+final MethodChannel _channel = const MethodChannel('flutter.io/superPlayer')
 // This will clear all open videos on the platform when a full restart is
 // performed.
   ..invokeMethod('init');
@@ -261,7 +261,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   }
 
   EventChannel _eventChannelFor(int textureId) {
-    return new EventChannel('flutter.io/videoPlayer/videoEvents$textureId');
+    return new EventChannel('flutter.io/superPlayer/videoEvents$textureId');
   }
 
   @override

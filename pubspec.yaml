@@ -1,8 +1,8 @@
 name: super_player
 description: A video player base on ijkplayer.
 version: 0.0.1
-author:
-homepage:
+author: lijinshan<1919437986@qq.com>
+homepage: https://github.com/lijinshanmx
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -13,7 +13,7 @@ dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
-
+  meta: ^1.1.6
 # The following section is specific to Flutter.
 flutter:
   plugin:

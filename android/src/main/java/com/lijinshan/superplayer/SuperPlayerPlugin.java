@@ -157,7 +157,7 @@ public class SuperPlayerPlugin implements MethodCallHandler {
 
     public static void registerWith(Registrar registrar) {
         final SuperPlayerPlugin plugin = new SuperPlayerPlugin(registrar);
-        final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter.io/videoPlayer");
+        final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter.io/superPlayer");
         channel.setMethodCallHandler(plugin);
         registrar.addViewDestroyListener(new PluginRegistry.ViewDestroyListener() {
             @Override
@@ -205,7 +205,7 @@ public class SuperPlayerPlugin implements MethodCallHandler {
                 break;
             case "create": {
                 TextureRegistry.SurfaceTextureEntry handle = textures.createSurfaceTexture();
-                EventChannel eventChannel = new EventChannel(registrar.messenger(), "flutter.io/videoPlayer/videoEvents" + handle.id());
+                EventChannel eventChannel = new EventChannel(registrar.messenger(), "flutter.io/superPlayer/videoEvents" + handle.id());
                 VideoPlayer player;
                 if (call.argument("asset") != null) {
                     String assetLookupKey;
